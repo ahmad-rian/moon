@@ -1,4 +1,3 @@
-// periodTracker.ts
 import { 
     getFirestore, 
     collection, 

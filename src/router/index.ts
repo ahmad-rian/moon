@@ -4,7 +4,12 @@ import RiwayatMenstruasi from '@/views/RiwayatMenstruasi.vue';
 
 const routes: Array<RouteRecordRaw> = [
   { path: '/', redirect: '/riwayat-menstruasi' },
-  { path: '/riwayat-menstruasi', component: RiwayatMenstruasi },
+  {
+    path: '/riwayat-menstruasi',
+    name: 'RiwayatMenstruasi',
+    component: () => import('../views/RiwayatMenstruasi.vue'),
+    meta: { requiresAuth: true }
+  },
   { path: '', redirect: '/landing' },  // Mengarahkan ke halaman LandingPage secara default
   {
     path: '/landing', 
